@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HELLO! My name is</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preload" as="font" href="fonts/empires-webfont.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="fonts/empires-webfont.woff" type="font/woff" crossorigin="anonymous">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="options">
+       <div class="option">
+         <label for="opt-fontfamily">Select Font</label>
+         <select name="opt-fontfamily" id="opt-fontfamily" onchange="changeFontFamily()">
+           <option value="empire">Empire</option>
+           <option value="a-dripping-marker">A Dripping Marker</option>
+           <option value="jacksilver">Jacksilver</option>
+         </select>
+       </div>
+      
+        <div class="option">
+         <label for="opt-fontsize">Font Size</label>
+         <input type="range" id="opt-fontsize" min="10" max="260" value="50">
+       </div>
+      
+        <div class="option">
+         <label for="opt-offsety">Offset Y</label>
+         <input type="range" id="opt-offsety" min="-20" max="20" value="50">
+       </div>
+      
+      <div class="option colors">
+          <span>BG Colors</span>
+          <div class="colors__inner">
+            <div class="color color-red"></div>
+            <div class="color color-blue" style="background: blue;"></div>
+            <div class="color color-green" style="background: green;"></div>
+            <div class="color color-yellow"></div>
+            <div class="color color-grad1"></div>
+            <div class="color color-grad2"></div>
+            <div class="color color-grad3"></div>
+          </div>
+      </div>
+    </div>
+    
+    
+    <div class="card">
+      <div class="card__top">
+        <h1>HELLO</h1>
+        <h4>my name is</h4>
+      </div>
+      <div class="card__middle">
+        <h2 class="card__title">Zeko</h2>
+      </div>
+  
+      <div class="card__bottom">
+  
+      </div>
+    </div>
+  </div>
+
+  <script src="js/functions.js"></script>
+</body>
+</html>
