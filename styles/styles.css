@@ -1,3 +1,51 @@
+@font-face {
+  font-family: "A Dripping Marker";
+  src: url("../fonts/a-dripping-marker/a-dripping-marker.woff2") format("woff2"), url("../fonts/a-dripping-marker/a-dripping-marker.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Jacksilver";
+  src: url("../fonts/jacksilver/jacksilver.woff2") format("woff2"), url("../fonts/jacksilver/jacksilver.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Street Wars";
+  src: url("../fonts/street-wars/street-wars.woff") format("woff"), url("../fonts/street-wars/street-wars.ttf") format("truetype"), url("../fonts/street-wars/street-wars.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Marsneveneksk";
+  src: url("../fonts/marsneveneksk/marsneveneksk-clean.woff") format("woff"), url("../fonts/marsneveneksk/marsneveneksk-clean.ttf") format("truetype"), url("../fonts/marsneveneksk/marsneveneksk-clean.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Don Graffiti";
+  src: url("../fonts/don-graffiti/don-graffiti.woff") format("woff"), url("../fonts/don-graffiti/don-graffiti.ttf") format("truetype"), url("../fonts/don-graffiti/don-graffiti.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "The Gunslinger";
+  src: url("../fonts/the-gunslinger/the-gunslinger.woff") format("woff"), url("../fonts/the-gunslinger/the-gunslinger.ttf") format("truetype"), url("../fonts/the-gunslinger/the-gunslinger.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Aftershock";
+  src: url("../fonts/aftershock/aftershock.woff") format("woff"), url("../fonts/aftershock/aftershock.ttf") format("truetype"), url("../fonts/aftershock/aftershock.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Fat Wandals";
+  src: url("../fonts/fat-wandals/fat-wandals.woff") format("woff"), url("../fonts/fat-wandals/fat-wandals.ttf") format("truetype"), url("../fonts/fat-wandals/fat-wandals.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   line-height: 1.4em;
   font-family: "Noto Sans JP", sans-serif;
@@ -5,24 +53,6 @@ body {
   margin: 0;
 }
 
-@font-face {
-  font-family: "A Dripping Marker";
-  src: url("../fonts/adrippingmarker.woff2") format("woff2"), url("../fonts/adrippingmarker.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Jacksilver";
-  src: url("../fonts/jacksilver.woff2") format("woff2"), url("../fonts/jacksilver.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Empires";
-  src: url("../fonts/empires.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 h1 {
   font-size: 40px;
   line-height: 46px;
@@ -34,8 +64,9 @@ h1 {
 
 h2 {
   margin: 0;
-  font-family: "Empires";
-  font-size: 150px;
+  font-family: "Jacksilver";
+  font-size: 120px;
+  line-height: 0.8em;
   position: relative;
   top: 0;
 }
@@ -61,6 +92,7 @@ h4 {
   width: 360px;
   text-align: center;
   background: #fff;
+  overflow: hidden;
 }
 .card__top {
   background: #ce1920;
@@ -68,7 +100,7 @@ h4 {
   padding: 5px 0;
 }
 .card__middle {
-  min-height: 130px;
+  height: 130px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,24 +116,36 @@ h4 {
 
 .options {
   position: absolute;
-  top: 20px;
+  bottom: 20px;
   left: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+}
+.options__left {
   display: flex;
 }
 
 .option {
   margin-right: 20px;
+  padding: 6px;
+  background: #dbddde;
+  border-radius: 6px;
 }
 .option__inner {
   height: 32px;
   display: flex;
   align-items: center;
 }
-.option label {
+.option .label {
   display: block;
   font-size: 13px;
-  color: #666;
+  color: #323537;
   margin-bottom: 1px;
+}
+.option .label span {
+  font-size: 10px;
+  color: blue;
 }
 .option select,
 .option input {
@@ -111,18 +155,28 @@ h4 {
   border-radius: 4px;
   width: 80px;
   box-sizing: border-box;
+  background: #cbced0;
+  border: 1px solid #b1b4b7;
+  height: 30px;
 }
 .option input {
-  height: 29px;
+  width: 120px;
 }
 .option select {
   width: 140px;
 }
-
-.colors > span {
-  font-size: 12px;
-  color: #666;
+.option h4 {
+  font-family: Fat Wandals;
+  font-size: 20px;
 }
+.option h4 a {
+  color: #6551b3;
+  transition: color 0.2s ease-in-out;
+}
+.option h4 a:hover {
+  color: #33285c;
+}
+
 .colors__inner {
   display: flex;
 }
@@ -167,15 +221,12 @@ h4 {
   background: #ffaa0e;
 }
 .color#color-nelson {
-  background: #f2709c;
   background: linear-gradient(90deg, #f2709c 0%, #ff9472 100%);
 }
-.color#color-nelson {
-  background: #00d2ff;
+.color#color-reef {
   background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
 }
 .color#color-neon {
-  background: #bebdec;
   background: linear-gradient(90deg, #bebdec 0%, #b2eafc 20%, #96f6eb 45%, #f5f5e6 74%, #ffdfec 100%);
 }
 

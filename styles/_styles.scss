@@ -1,37 +1,13 @@
-$bg: #e6e7e8;
-$red: #ce1920;
-$blue: #1e61f9;
-$green: #20843e;
-$yellow: #ffaa0e;
+// Imports
+@import 'components/variables.scss'; 
+@import 'components/fonts.scss'; 
 
+// Styling
 body {
   line-height: 1.4em;
   font-family: 'Noto Sans JP', sans-serif;
-  background: #e6e7e8;
+  background: $bg;
   margin: 0;
-}
-
-@font-face {
-  font-family: 'A Dripping Marker';
-  src: url('../fonts/adrippingmarker.woff2') format('woff2'),
-       url('../fonts/adrippingmarker.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Jacksilver';
-  src: url('../fonts/jacksilver.woff2') format('woff2'),
-       url('../fonts/jacksilver.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Empires';
-  src: url('../fonts/empires.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 }
 
 h1 {
@@ -39,14 +15,15 @@ h1 {
   line-height: 46px;
   letter-spacing: 5px;
   margin: 0 0 -5px 0;
-  color: #fff;
+  color: $white;
   font-weight: bold;
 }
 
 h2 {
   margin: 0;
-  font-family: 'Empires';
-  font-size: 150px;
+  font-family: 'Jacksilver';
+  font-size: 120px;
+  line-height: 0.8em;
   position: relative;
   top: 0;
 }
@@ -55,7 +32,7 @@ h4 {
   font-size: 14px;
   line-height: 22px;
   margin: 0;
-  color: #fff;
+  color: $white;
   font-weight: 600;
 }
 
@@ -71,14 +48,15 @@ h4 {
   border-radius: 10px;
   width: 360px;
   text-align: center;
-  background: #fff;
+  background: $white;
+  overflow: hidden;
   &__top {
     background: $red;
     border-radius: 10px 10px 0 0;
     padding: 5px 0;
   }
   &__middle {
-    min-height: 130px;
+    height: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,27 +72,36 @@ h4 {
   }
 }
 
-
 .options {
   position: absolute;
-  top: 20px;
+  bottom: 20px;
   left: 20px;
   display: flex;
-  
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  &__left {
+    display: flex;
+  }
 }
-
 .option {
   margin-right: 20px;
+  padding: 6px;
+  background: darken($bg, 4%);
+  border-radius: 6px;
   &__inner {
     height: 32px;
     display: flex;
     align-items: center;
   }
-  label {
+  .label {
     display: block;
     font-size: 13px;
-    color: #666;
+    color: darken($bg, 70%);
     margin-bottom: 1px;
+    span {
+      font-size: 10px;
+      color: blue;
+    }
   }
   select,
   input {
@@ -124,20 +111,30 @@ h4 {
     border-radius: 4px;
     width: 80px;
     box-sizing: border-box;
+    background: darken($bg, 10%);
+    border: 1px solid darken($bg, 20%);
+    height: 30px;
   }
   input {
-    height: 29px;
+    width: 120px;
   }
   select {
     width: 140px;
   }
+  h4 {
+    font-family: Fat Wandals;
+    font-size: 20px;
+    a {
+      color: $purple;
+      transition: color .2s ease-in-out;
+      &:hover {
+        color: darken($purple, 25%);
+      }
+    }
+  }
 }
 
 .colors {
-  > span {
-    font-size: 12px;
-    color: #666;
-  }
   &__inner {
     display: flex;
   }
@@ -184,15 +181,12 @@ h4 {
     background: $yellow;
   }
   &#color-nelson {
-    background: rgb(242,112,156);
-    background: linear-gradient(90deg, rgba(242,112,156,1) 0%, rgba(255,148,114,1) 100%);
+    background: $nelson;
   }
-  &#color-nelson {
-    background: rgb(0,210,255);
-    background: linear-gradient(90deg, rgba(0,210,255,1) 0%, rgba(58,123,213,1) 100%);
+  &#color-reef {
+    background: $reef;
   }
   &#color-neon {
-    background: rgb(190,189,236);
-    background: linear-gradient(90deg, rgba(190,189,236,1) 0%, rgba(178,234,252,1) 20%, rgba(150,246,235,1) 45%, rgba(245,245,230,1) 74%, rgba(255,223,236,1) 100%);
+    background: $neon;
   }
 }

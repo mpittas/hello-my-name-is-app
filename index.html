@@ -7,35 +7,88 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
   <div class="wrapper">
     <div class="options">
-       <div class="option">
-         <label class="label" for="opt-fontfamily">Select Font</label>
-         <div class="option__inner">
-          <select name="opt-fontfamily" id="opt-fontfamily" onchange="changeFontFamily()">
-            <option value="empire">Empire</option>
-            <option value="a-dripping-marker">A Dripping Marker</option>
-            <option value="jacksilver">Jacksilver</option>
-          </select>
-         </div>
-       </div>
-      
+      <div class="options__left">
         <div class="option">
-         <label class="label" for="opt-fontsize">Font Size</label>
-         <div class="option__inner">
+          <label for="change-text" class="label" style="color: #218a33; font-weight: 500;">Change Text</label>
+          <div class="option__inner">
+            <input type="text" value="" id="change-text" placeholder="Your text here" autofocus onkeypress="updateValue();" onkeydown="updateValue();" oninput="updateValue();">
+          </div>
+        </div>
+  
+        <div class="option">
+          <label class="label" for="opt-fontfamily">Select Font</label>
+          <div class="option__inner">
+            <select name="opt-fontfamily" id="opt-fontfamily" onchange="changeFontFamily()">
+              <option value="jacksilver">Jacksilver</option>
+              <option value="a-dripping-marker">A Dripping Marker</option>
+              <option value="street-wars">Steet Wars</option>
+              <option value="marsneveneksk">Marsneveneksk</option>
+              <option value="don-graffiti">Don Graffiti</option>
+              <option value="the-gunslinger">The Gunslinger</option>
+              <option value="aftershock">Aftershock</option>
+              <option value="fat-wandals">Fat Wandals</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="option">
+          <label class="label" for="opt-fontsize">
+            Font Size
+            <span class="string-font-size">120 px</span>
+          </label>
+  
+          <div class="option__inner">
             <input type="range" id="opt-fontsize" min="10" max="260" value="120">
+          </div>
          </div>
-       </div>
-      
-        <div class="option">
-         <label class="label" for="opt-offsety">Offset Y</label>
-         <div class="option__inner">
-          <input type="range" id="opt-offsety" min="-40" max="40" value="0">
+        
+         <div class="option">
+          <label class="label" for="opt-offset-y">
+            Offset Y
+            <span class="string-offset-y">0 px</span>
+          </label>
+  
+          <div class="option__inner">
+            <input type="range" id="opt-offset-y" min="-40" max="40" value="0">
+          </div>
+        </div>
+        
+         <div class="option">
+          <label class="label" for="opt-offset-x">
+            Offset X
+            <span class="string-offset-x">0 px</span>
+          </label>
+  
+          <div class="option__inner">
+            <input type="range" id="opt-offset-x" min="-40" max="40" value="0">
+          </div>
+        </div>
+  
+         <div class="option">
+          <label class="label" for="opt-rotate">
+            Rotate
+            <span class="string-rotate">0 deg</span>
+          </label>
+          <div class="option__inner">
+            <input type="range" id="opt-rotate" min="-20" max="20" value="0">
+          </div>
          </div>
-       </div>
-      
-      <div class="option colors">
+         
+         <div class="option">
+          <label class="label" for="letter-spacing">
+            Letter Spacing
+            <span class="string-letter-spacing">0 px</span>
+          </label>
+          <div class="option__inner">
+            <input type="range" id="letter-spacing" min="-10" max="10" value="0">
+          </div>
+         </div>
+        
+        <div class="option colors">
           <span class="label">BG Colors</span>
           <div class="option__inner">
             <div class="colors__inner" id="colors-inner">
@@ -48,9 +101,18 @@
               <span class="color" id="color-neon" onClick="changeCardBG('linear-gradient(90deg, rgb(190, 189, 236) 0%, rgb(178, 234, 252) 20%, rgb(119, 208, 198) 45%, rgb(249, 238, 238) 74%, rgb(255, 223, 236) 100%)')"></span>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="options__right">
+        <div class="option" style="padding: 6px 20px;">
+          <span class="label">Created by:</label>
+          <div class="option__inner">
+            <h4><a href="http://mariospittas.com" target="_blank">Marios</a></h4>
+          </div>
+        </div>
       </div>
     </div>
-    
     
     <div class="card">
       <div id="top" class="card__top card__bg">
@@ -58,12 +120,10 @@
         <h4>my name is</h4>
       </div>
       <div class="card__middle">
-        <h2 class="card__title">Zeko</h2>
+        <h2 class="card__title" id="card-text">Zeko</h2>
       </div>
   
-      <div id="top" class="card__bottom card__bg">
-  
-      </div>
+      <div id="top" class="card__bottom card__bg"></div>
     </div>
   </div>
 
