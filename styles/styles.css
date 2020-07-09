@@ -1,7 +1,7 @@
 body {
   line-height: 1.4em;
-  font-family: arial;
-  background: #eee;
+  font-family: "Noto Sans JP", sans-serif;
+  background: #e6e7e8;
   margin: 0;
 }
 
@@ -92,6 +92,11 @@ h4 {
 .option {
   margin-right: 20px;
 }
+.option__inner {
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
 .option label {
   display: block;
   font-size: 13px;
@@ -120,38 +125,56 @@ h4 {
 }
 .colors__inner {
   display: flex;
-  position: relative;
-  top: 5px;
 }
 
 .color {
   background: #ce1920;
-  width: 20px;
-  height: 20px;
-  border-radius: 6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
   margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  border: 1px solid transparent;
+  position: relative;
 }
-.color.color-red {
+.color:before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+.color.active:before {
+  border-color: #969b9f;
+}
+.color:hover {
+  transform: translateY(-3px);
+}
+.color#color-red {
   background: #ce1920;
 }
-.color.color-blue {
+.color#color-blue {
   background: #1e61f9;
 }
-.color.color-green {
+.color#color-green {
   background: #20843e;
 }
-.color.color-yellow {
+.color#color-yellow {
   background: #ffaa0e;
 }
-.color.color-nelson {
+.color#color-nelson {
   background: #f2709c;
   background: linear-gradient(90deg, #f2709c 0%, #ff9472 100%);
 }
-.color.color- {
+.color#color-nelson {
   background: #00d2ff;
   background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
 }
-.color.color-neon {
+.color#color-neon {
   background: #bebdec;
   background: linear-gradient(90deg, #bebdec 0%, #b2eafc 20%, #96f6eb 45%, #f5f5e6 74%, #ffdfec 100%);
 }

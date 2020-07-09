@@ -1,14 +1,15 @@
-body {
-  line-height: 1.4em;
-  font-family: arial;
-  background: #eee;
-  margin: 0;
-}
-
+$bg: #e6e7e8;
 $red: #ce1920;
 $blue: #1e61f9;
 $green: #20843e;
 $yellow: #ffaa0e;
+
+body {
+  line-height: 1.4em;
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #e6e7e8;
+  margin: 0;
+}
 
 @font-face {
   font-family: 'A Dripping Marker';
@@ -104,6 +105,11 @@ h4 {
 
 .option {
   margin-right: 20px;
+  &__inner {
+    height: 32px;
+    display: flex;
+    align-items: center;
+  }
   label {
     display: block;
     font-size: 13px;
@@ -134,38 +140,58 @@ h4 {
   }
   &__inner {
     display: flex;
-    position: relative;
-    top: 5px;
   }
 }
 
 .color {
   background: $red;
-  width: 20px;
-  height: 20px;
-  border-radius: 6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
   margin-right: 10px;
-  &.color-red {
+  cursor: pointer;
+  transition: transform .2s ease-in-out;
+  border: 1px solid transparent;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+  }
+  &.active {
+    &:before {
+      border-color: darken($bg, 30%);
+    }
+  }
+  &:hover {
+    transform: translateY(-3px);
+  }
+  &#color-red {
     background: $red;
   }
-  &.color-blue {
+  &#color-blue {
     background: $blue;
   }
-  &.color-green {
+  &#color-green {
     background: $green;
   }
-  &.color-yellow {
+  &#color-yellow {
     background: $yellow;
   }
-  &.color-nelson {
+  &#color-nelson {
     background: rgb(242,112,156);
     background: linear-gradient(90deg, rgba(242,112,156,1) 0%, rgba(255,148,114,1) 100%);
   }
-  &.color- {
+  &#color-nelson {
     background: rgb(0,210,255);
     background: linear-gradient(90deg, rgba(0,210,255,1) 0%, rgba(58,123,213,1) 100%);
   }
-  &.color-neon {
+  &#color-neon {
     background: rgb(190,189,236);
     background: linear-gradient(90deg, rgba(190,189,236,1) 0%, rgba(178,234,252,1) 20%, rgba(150,246,235,1) 45%, rgba(245,245,230,1) 74%, rgba(255,223,236,1) 100%);
   }

@@ -4,47 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HELLO! My name is</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
   <div class="wrapper">
     <div class="options">
        <div class="option">
-         <label for="opt-fontfamily">Select Font</label>
-         <select name="opt-fontfamily" id="opt-fontfamily" onchange="changeFontFamily()">
-           <option value="empire">Empire</option>
-           <option value="a-dripping-marker">A Dripping Marker</option>
-           <option value="jacksilver">Jacksilver</option>
-         </select>
+         <label class="label" for="opt-fontfamily">Select Font</label>
+         <div class="option__inner">
+          <select name="opt-fontfamily" id="opt-fontfamily" onchange="changeFontFamily()">
+            <option value="empire">Empire</option>
+            <option value="a-dripping-marker">A Dripping Marker</option>
+            <option value="jacksilver">Jacksilver</option>
+          </select>
+         </div>
        </div>
       
         <div class="option">
-         <label for="opt-fontsize">Font Size</label>
-         <input type="range" id="opt-fontsize" min="10" max="260" value="120">
+         <label class="label" for="opt-fontsize">Font Size</label>
+         <div class="option__inner">
+            <input type="range" id="opt-fontsize" min="10" max="260" value="120">
+         </div>
        </div>
       
         <div class="option">
-         <label for="opt-offsety">Offset Y</label>
-         <input type="range" id="opt-offsety" min="-40" max="40" value="0">
+         <label class="label" for="opt-offsety">Offset Y</label>
+         <div class="option__inner">
+          <input type="range" id="opt-offsety" min="-40" max="40" value="0">
+         </div>
        </div>
       
       <div class="option colors">
-          <span>BG Colors</span>
-          <div class="colors__inner">
-            <div class="color color-red"></div>
-            <div class="color color-blue"></div>
-            <div class="color color-green"></div>
-            <div class="color color-yellow"></div>
-            <div class="color color-nelson"></div>
-            <div class="color color-reef"></div>
-            <div class="color color-neon"></div>
+          <span class="label">BG Colors</span>
+          <div class="option__inner">
+            <div class="colors__inner" id="colors-inner">
+              <span class="color active" id="color-red" onClick="changeCardBG('#ce1920')"></span>
+              <span class="color" id="color-blue" onClick="changeCardBG('#1e61f9')"></span>
+              <span class="color" id="color-green" onClick="changeCardBG('#20843e')"></span>
+              <span class="color" id="color-yellow" onClick="changeCardBG('#ffaa0e')"></span>
+              <span class="color" id="color-nelson" onClick="changeCardBG('linear-gradient(90deg, rgba(242,112,156,1) 0%, rgba(255,148,114,1) 100%)')"></span>
+              <span class="color" id="color-reef" onClick="changeCardBG('linear-gradient(90deg, rgba(0,210,255,1) 0%, rgba(58,123,213,1) 100%)')"></span>
+              <span class="color" id="color-neon" onClick="changeCardBG('linear-gradient(90deg, rgb(190, 189, 236) 0%, rgb(178, 234, 252) 20%, rgb(119, 208, 198) 45%, rgb(249, 238, 238) 74%, rgb(255, 223, 236) 100%)')"></span>
+            </div>
           </div>
       </div>
     </div>
     
     
     <div class="card">
-      <div class="card__top card__bg">
+      <div id="top" class="card__top card__bg">
         <h1>HELLO</h1>
         <h4>my name is</h4>
       </div>
@@ -52,7 +61,7 @@
         <h2 class="card__title">Zeko</h2>
       </div>
   
-      <div class="card__bottom card__bg">
+      <div id="top" class="card__bottom card__bg">
   
       </div>
     </div>
