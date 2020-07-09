@@ -2,6 +2,8 @@ const inputFontSize = document.querySelector('#opt-fontsize');
 // vars
 const selectFontFamily = document.querySelector('#opt-fontfamily');
 const inputOffsetY = document.querySelector('#opt-offsety');
+const cardBg = document.querySelector('.card__bg');
+const colorEl = document.querySelector('.color');
 const titleEl = document.querySelector('.card__title');
 
 function changeFontFamily() {
@@ -23,6 +25,18 @@ inputOffsetY.addEventListener('change', (event) => {
   console.log(inputOffsetY.value);
   // test change
 });
+
+colorEl.addEventListener('click', (event) => {
+  switch (colorEl) {
+    case "color-red":
+      cardBg.style.background = "1e61f9"
+    case "color-blue":
+      cardBg.style.background = "1e61f9"
+    default:
+  }
+
+});
+
 
 
 

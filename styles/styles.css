@@ -63,7 +63,7 @@ h4 {
   background: #fff;
 }
 .card__top {
-  background: #CE1920;
+  background: #ce1920;
   border-radius: 10px 10px 0 0;
   padding: 5px 0;
 }
@@ -75,8 +75,11 @@ h4 {
 }
 .card__bottom {
   height: 18px;
-  background: #CE1920;
+  background: #ce1920;
   border-radius: 0 0 10px 10px;
+}
+.card__top, .card__bottom {
+  background: #ce1920;
 }
 
 .options {
@@ -117,17 +120,40 @@ h4 {
 }
 .colors__inner {
   display: flex;
+  position: relative;
+  top: 5px;
 }
 
 .color {
-  background: red;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  margin-right: 5px;
+  background: #ce1920;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  margin-right: 10px;
 }
 .color.color-red {
-  background: red;
+  background: #ce1920;
+}
+.color.color-blue {
+  background: #1e61f9;
+}
+.color.color-green {
+  background: #20843e;
+}
+.color.color-yellow {
+  background: #ffaa0e;
+}
+.color.color-nelson {
+  background: #f2709c;
+  background: linear-gradient(90deg, #f2709c 0%, #ff9472 100%);
+}
+.color.color- {
+  background: #00d2ff;
+  background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+}
+.color.color-neon {
+  background: #bebdec;
+  background: linear-gradient(90deg, #bebdec 0%, #b2eafc 20%, #96f6eb 45%, #f5f5e6 74%, #ffdfec 100%);
 }
 
 /*# sourceMappingURL=styles.css.map */

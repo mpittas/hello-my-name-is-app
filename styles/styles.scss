@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+$red: #ce1920;
+$blue: #1e61f9;
+$green: #20843e;
+$yellow: #ffaa0e;
 
 @font-face {
   font-family: 'A Dripping Marker';
@@ -68,7 +72,7 @@ h4 {
   text-align: center;
   background: #fff;
   &__top {
-    background: #CE1920;
+    background: $red;
     border-radius: 10px 10px 0 0;
     padding: 5px 0;
   }
@@ -80,8 +84,12 @@ h4 {
   }
   &__bottom {
     height: 18px;
-    background: #CE1920;
+    background: $red;
     border-radius: 0 0 10px 10px;
+  }
+  &__top,
+  &__bottom {
+    background: $red;
   }
 }
 
@@ -126,16 +134,39 @@ h4 {
   }
   &__inner {
     display: flex;
+    position: relative;
+    top: 5px;
   }
 }
 
 .color {
-  background: red;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  margin-right: 5px;
+  background: $red;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  margin-right: 10px;
   &.color-red {
-    background: red;
+    background: $red;
+  }
+  &.color-blue {
+    background: $blue;
+  }
+  &.color-green {
+    background: $green;
+  }
+  &.color-yellow {
+    background: $yellow;
+  }
+  &.color-nelson {
+    background: rgb(242,112,156);
+    background: linear-gradient(90deg, rgba(242,112,156,1) 0%, rgba(255,148,114,1) 100%);
+  }
+  &.color- {
+    background: rgb(0,210,255);
+    background: linear-gradient(90deg, rgba(0,210,255,1) 0%, rgba(58,123,213,1) 100%);
+  }
+  &.color-neon {
+    background: rgb(190,189,236);
+    background: linear-gradient(90deg, rgba(190,189,236,1) 0%, rgba(178,234,252,1) 20%, rgba(150,246,235,1) 45%, rgba(245,245,230,1) 74%, rgba(255,223,236,1) 100%);
   }
 }
