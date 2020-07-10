@@ -93,6 +93,8 @@ h4 {
   text-align: center;
   background: #fff;
   overflow: hidden;
+  position: relative;
+  top: -50px;
 }
 .card__top {
   background: #ce1920;
@@ -116,21 +118,23 @@ h4 {
 
 .options {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 5px;
+  left: 5px;
   display: flex;
   justify-content: space-between;
   width: calc(100% - 40px);
 }
 .options__left {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .option {
-  margin-right: 20px;
+  margin: 5px;
   padding: 6px;
   background: #dbddde;
   border-radius: 6px;
+  box-sizing: border-box;
 }
 .option__inner {
   height: 32px;
@@ -179,6 +183,7 @@ h4 {
 
 .colors__inner {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .color {
@@ -228,6 +233,52 @@ h4 {
 }
 .color#color-neon {
   background: linear-gradient(90deg, #bebdec 0%, #b2eafc 20%, #96f6eb 45%, #f5f5e6 74%, #ffdfec 100%);
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    padding: 15px;
+  }
+
+  .options {
+    position: static;
+    left: auto;
+    top: auto;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .options__right {
+    display: none;
+  }
+  .options .option {
+    margin: 1%;
+    width: 48%;
+  }
+  .options .option__inner {
+    height: auto;
+  }
+  .options .option input,
+.options .option select {
+    width: 100%;
+  }
+
+  .card {
+    top: auto;
+  }
+
+  .color {
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
