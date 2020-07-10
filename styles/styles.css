@@ -1,48 +1,48 @@
 @font-face {
   font-family: "A Dripping Marker";
-  src: url("../fonts/a-dripping-marker/a-dripping-marker.woff2") format("woff2"), url("../fonts/a-dripping-marker/a-dripping-marker.woff") format("woff");
+  src: url("../assets/fonts/a-dripping-marker/a-dripping-marker.woff2") format("woff2"), url("../assets/fonts/a-dripping-marker/a-dripping-marker.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Jacksilver";
-  src: url("../fonts/jacksilver/jacksilver.woff2") format("woff2"), url("../fonts/jacksilver/jacksilver.woff") format("woff");
+  src: url("../assets/fonts/jacksilver/jacksilver.woff2") format("woff2"), url("../assets/fonts/jacksilver/jacksilver.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Street Wars";
-  src: url("../fonts/street-wars/street-wars.woff") format("woff"), url("../fonts/street-wars/street-wars.ttf") format("truetype"), url("../fonts/street-wars/street-wars.svg") format("svg");
+  src: url("../assets/fonts/street-wars/street-wars.woff") format("woff"), url("../assets/fonts/street-wars/street-wars.ttf") format("truetype"), url("../assets/fonts/street-wars/street-wars.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Marsneveneksk";
-  src: url("../fonts/marsneveneksk/marsneveneksk-clean.woff") format("woff"), url("../fonts/marsneveneksk/marsneveneksk-clean.ttf") format("truetype"), url("../fonts/marsneveneksk/marsneveneksk-clean.svg") format("svg");
+  src: url("../assets/fonts/marsneveneksk/marsneveneksk-clean.woff") format("woff"), url("../assets/fonts/marsneveneksk/marsneveneksk-clean.ttf") format("truetype"), url("../assets/fonts/marsneveneksk/marsneveneksk-clean.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Don Graffiti";
-  src: url("../fonts/don-graffiti/don-graffiti.woff") format("woff"), url("../fonts/don-graffiti/don-graffiti.ttf") format("truetype"), url("../fonts/don-graffiti/don-graffiti.svg") format("svg");
+  src: url("../assets/fonts/don-graffiti/don-graffiti.woff") format("woff"), url("../assets/fonts/don-graffiti/don-graffiti.ttf") format("truetype"), url("../assets/fonts/don-graffiti/don-graffiti.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "The Gunslinger";
-  src: url("../fonts/the-gunslinger/the-gunslinger.woff") format("woff"), url("../fonts/the-gunslinger/the-gunslinger.ttf") format("truetype"), url("../fonts/the-gunslinger/the-gunslinger.svg") format("svg");
+  src: url("../assets/fonts/the-gunslinger/the-gunslinger.woff") format("woff"), url("../assets/fonts/the-gunslinger/the-gunslinger.ttf") format("truetype"), url("../assets/fonts/the-gunslinger/the-gunslinger.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Aftershock";
-  src: url("../fonts/aftershock/aftershock.woff") format("woff"), url("../fonts/aftershock/aftershock.ttf") format("truetype"), url("../fonts/aftershock/aftershock.svg") format("svg");
+  src: url("../assets/fonts/aftershock/aftershock.woff") format("woff"), url("../assets/fonts/aftershock/aftershock.ttf") format("truetype"), url("../assets/fonts/aftershock/aftershock.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Fat Wandals";
-  src: url("../fonts/fat-wandals/fat-wandals.woff") format("woff"), url("../fonts/fat-wandals/fat-wandals.ttf") format("truetype"), url("../fonts/fat-wandals/fat-wandals.svg") format("svg");
+  src: url("../assets/fonts/fat-wandals/fat-wandals.woff") format("woff"), url("../assets/fonts/fat-wandals/fat-wandals.ttf") format("truetype"), url("../assets/fonts/fat-wandals/fat-wandals.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
