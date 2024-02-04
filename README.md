@@ -1,2 +1,5 @@
-# hellomynameis
-Interactive way of recreating classic "HELLO, My name is..." sticker.
+# Demo
+https://github.com/mpittas/hello-my-name-is-app
+
+# About
+
